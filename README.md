@@ -1,66 +1,72 @@
+# 🧬 Klasifikasi Sel Darah: Deep Learning untuk Pengenalan Citra Mikroskopis
 
-# 🧬 Blood Cell Classifier: Deep Learning for Microscopic Image Recognition
+## 📌 Ringkasan Proyek
 
-## 📌 Project Overview
-This project focuses on building an image classification model using **Convolutional Neural Networks (CNNs)** to identify different types of blood cells from microscopic images. The goal is to create a robust classifier that can assist in automating blood cell categorization — a task traditionally performed manually by medical professionals.
+Proyek ini bertujuan untuk membangun model klasifikasi citra menggunakan **Convolutional Neural Networks (CNNs)** guna mengidentifikasi berbagai jenis sel darah dari gambar mikroskopis. Tujuan utamanya adalah menciptakan pengklasifikasi yang andal untuk membantu proses otomatisasi kategorisasi sel darah — sebuah tugas yang selama ini dilakukan secara manual oleh tenaga medis profesional.
 
 ## 📁 Dataset
-The dataset used in this project is publicly available on Kaggle:
+
+Dataset yang digunakan tersedia secara publik di Kaggle:
 
 🔗 [Blood Cells Image Dataset](https://www.kaggle.com/datasets/unclesamulus/blood-cells-image-dataset)
 
-It contains thousands of labeled images of blood cells, organized into various classes representing types such as:
-- Neutrophils
-- Eosinophils
-- Basophils
-- Lymphocytes
-- Monocytes
-- Platelets
-- Immature Granulocytes (IG)
-- Erythroblasts
+Dataset ini berisi ribuan gambar sel darah yang telah diberi label, dengan beberapa kelas utama seperti:
 
-## 🛠 Workflow Summary
-This project consists of several key steps:
-- **Data Exploration & Preprocessing**: Image resizing, normalization, augmentation.
-- **Model Development**: Building and training CNN architectures using TensorFlow/Keras.
-- **Model Evaluation**: Using metrics like accuracy, precision, recall, and confusion matrix.
-- **Model Deployment**: Exporting trained models to multiple formats:
-  - **TensorFlow SavedModel** (for server-based deployment)
-  - **TensorFlow.js** (for web deployment)
-  - **TensorFlow Lite** (for mobile & edge devices)
+* Neutrofil
+* Eosinofil
+* Basofil
+* Limfosit
+* Monosit
+* Platelet
+* Granulosit Imatur (IG)
+* Eritroblas
 
-## 📂 Directory Structure
+## 🛠 Alur Kerja Proyek
+
+Proyek ini terdiri dari beberapa tahapan penting:
+
+* **Eksplorasi & Pra-pemrosesan Data**: Resize gambar, normalisasi, augmentasi citra.
+* **Pengembangan Model**: Membangun dan melatih arsitektur CNN menggunakan TensorFlow/Keras.
+* **Evaluasi Model**: Menggunakan metrik seperti akurasi, presisi, recall, dan confusion matrix.
+* **Deploy Model**: Mengekspor model yang telah dilatih ke beberapa format untuk berbagai platform:
+
+  * **TensorFlow SavedModel** (untuk deployment berbasis server)
+  * **TensorFlow\.js** (untuk deployment di web)
+  * **TensorFlow Lite** (untuk perangkat mobile dan edge)
+
+## 📂 Struktur Direktori
+
 ```
-
 submission/
-├───tfjs\_model
+├───tfjs_model/
 │   ├───group1-shard1of4.bin
 │   └───model.json
-├───tflite
+├───tflite/
 │   ├───model.tflite
 │   └───labels.txt
-├───saved\_model
+├───saved_model/
 │   ├───assets/
 │   ├───variables/
 │   ├───fingerprint.pb
-│   └───saved\_model.pb
+│   └───saved_model.pb
 ├───notebook.ipynb
 ├───README.md
 └───requirements.txt
+```
 
-````
+## ⚙️ Persiapan Environment
 
-## ⚙️ Environment Setup
-### 1. Create and activate a virtual environment
+### 1. Membuat dan Mengaktifkan Virtual Environment
+
 ```bash
 python -m venv venv
 # Windows
 venv\Scripts\activate
 # macOS/Linux
 source venv/bin/activate
-````
+```
 
-### 2. Install dependencies
+### 2. Instalasi Dependensi
 
 ```bash
 pip install -r requirements.txt
